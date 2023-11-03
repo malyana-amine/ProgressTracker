@@ -1,6 +1,7 @@
 package org.example.Services.User;
 
 import org.example.Entities.User;
+import org.example.Repositories.ObjectifRepository;
 import org.example.Repositories.UserRepository;
 import org.springframework.stereotype.Service;
 
@@ -11,8 +12,10 @@ import java.util.Optional;
 public class UserServiceImpl implements UserService {
 
     private UserRepository userRepository;
-    public UserServiceImpl(UserRepository userRepository) {
+    ObjectifRepository objectifRepository ;
+    public UserServiceImpl(UserRepository userRepository,ObjectifRepository objectifRepository) {
         this.userRepository = userRepository;
+        this.objectifRepository = objectifRepository;
     }
 
     @Override

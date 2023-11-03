@@ -65,5 +65,9 @@
     <!-- Define UserService bean -->
     <bean name="userService" class="org.example.Services.User.UserServiceImpl">
         <constructor-arg index="0" ref="userRepository" />
+        <constructor-arg index="1" ref="objectifRepository" />
+    </bean>
+    <bean name="objectifService" class="org.example.Services.Objectif.ObjectifServiceImpl">
+        <constructor-arg index="0" ref="objectifRepository" />
     </bean>
 </beans>
